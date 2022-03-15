@@ -1,0 +1,27 @@
+void spin (char* a,int sz,int input)
+{
+	int i = 0;
+	for (i = 0; i < input; i++)
+	{
+		int tmp = 0;
+		tmp = *a;
+		for (int j = 0; j < sz-1 ; j++)
+		{
+			*(a+j) = *(a + j+1);
+		}
+		*(a + sz - 1) = tmp;
+
+	}
+}
+
+int main()
+{
+	char str[] = "asdf";
+	int sz = strlen(str);
+	int input;
+	scanf("%d", &input);
+	spin(str, sz, input);
+	printf("%s", str);
+
+	return 0;
+}
