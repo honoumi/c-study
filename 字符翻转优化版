@@ -1,6 +1,6 @@
 void reserve(char* l, char* r)
 {
-	while (l<r)
+	while (l<=r)
 	{
 		char tmp = *l;
 		*l = *r;
@@ -23,12 +23,22 @@ void left_move(char* arr, int k)
 	
 
 }
+void right_move(char* arr, int k)
+{
+	int len = strlen(arr);
+	assert(k < len);
+	reserve(arr+len-k, arr +len-1);
+	reserve(arr, arr + len-k-1);
+	reserve(arr, arr + len - 1);
 
+
+
+}
 int main()
 {
 	
 	char str[] = "asbdef";
-	left_move(str,1000);
+	right_move(str,5);
 	printf("%s", str);
 
 
