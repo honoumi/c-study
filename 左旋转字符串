@@ -1,6 +1,7 @@
-void spin (char* a,int sz,int input)//左旋
+void spin (char* a,int input)//左旋
 
 {
+	int sz = strlen(a);
 	int i = 0;
 	for (i = 0; i < input; i++)
 	{
@@ -15,8 +16,9 @@ void spin (char* a,int sz,int input)//左旋
 	}
 }
 
-void spin2(char* a, int sz, int input)//右旋
+void spin2(char* a, int input)//右旋
 {
+	int sz = strlen(a);
 	int i = 0;
 	for (i = 0; i < input; i++)
 	{
@@ -32,11 +34,10 @@ void spin2(char* a, int sz, int input)//右旋
 }
 int main()
 {
-	char str[] = "asdf";
-	int sz = strlen(str);
+	char str[] = "asdfghjkl";
 	int input;
 	scanf("%d", &input);
-	spin2(str, sz, input);
+	spin2(str,input);
 	printf("%s", str);
 
 	return 0;
