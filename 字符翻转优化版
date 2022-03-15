@@ -15,6 +15,7 @@ void reserve(char* l, char* r)
 void left_move(char* arr, int k)
 {
 	int len = strlen(arr);
+	assert(k < len);
 	reserve(arr, arr + k - 1);
 	reserve(arr + k, arr + len - 1);
 	reserve(arr, arr + len - 1);
@@ -25,8 +26,9 @@ void left_move(char* arr, int k)
 
 int main()
 {
+	
 	char str[] = "asbdef";
-	left_move(str, 3);
+	left_move(str,1000);
 	printf("%s", str);
 
 
