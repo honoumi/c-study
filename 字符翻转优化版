@@ -1,0 +1,34 @@
+void reserve(char* l, char* r)
+{
+	while (l<r)
+	{
+		char tmp = *l;
+		*l = *r;
+		*r = tmp;
+		l++;
+		r--;
+
+	}
+
+
+}
+void left_move(char* arr, int k)
+{
+	int len = strlen(arr);
+	reserve(arr, arr + k - 1);
+	reserve(arr + k, arr + len - 1);
+	reserve(arr, arr + len - 1);
+
+	
+
+}
+
+int main()
+{
+	char str[] = "asbdef";
+	left_move(str, 3);
+	printf("%s", str);
+
+
+	return 0;
+}
