@@ -1,0 +1,53 @@
+int cmp_str(char*p1,char*p2)
+{
+	int sz = strlen(p1);
+	int i = 0;
+	int count = 0;
+	for (i = 0; i <= sz; i++)
+	{
+		int j = 0;
+		count = 0;
+		for (j = 0; j < sz; j++)
+		{
+			if (*(p1 + j) == *(p2 + j + i))
+			{
+				count++;
+			}
+		}
+
+		if (count == sz )
+		{
+			break;
+		}
+
+	}
+
+	if (count == sz && i != 0)
+	{
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}
+
+}
+int main()
+{
+	char as[300] = "asdfg";
+	char bs[] = "asdfg";
+	copy(as);
+	int k = cmp_str(bs, as);
+	if (k == 1)
+	{
+		printf("YES\n");
+	}
+	else
+	{
+		printf("NO\n");
+	}
+
+
+
+	return 0;
+}
