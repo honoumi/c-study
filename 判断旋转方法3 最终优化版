@@ -32,6 +32,31 @@ int cmp_str(char*p1,char*p2)
 	}
 
 }
+int jugde(char* p1, char* p2)
+{
+	int sz = strlen(p1);
+	int sz1 = strlen(p2);
+	if (sz1 = sz)
+	{
+		strncat(p1, p1,sz);
+		char* n= strstr(p1, p2);
+		if (n == NULL)
+		{
+			return 0;
+		}
+		else
+		{
+			return 1;
+		}
+
+	}
+	else
+	{
+		return 0;
+	}
+
+}// 最简洁的办法
+
 int main()
 {
 	char as[300] = "asdfg";
