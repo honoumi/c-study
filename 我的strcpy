@@ -12,6 +12,17 @@ void my_strcpy(char* d, char* t)
 
 
 }
+void my_strcpy2(char* d, char* t)
+{
+	assert(d != NULL);
+	assert(t != NULL);
+	while (*d++ = *t++)
+	{
+		;
+	}
+
+
+}
 
 
 int main()
