@@ -1,0 +1,24 @@
+void my_strcpy(char* d, char* t)
+{
+	assert(d != NULL);
+	assert(t != NULL);
+
+	int k = strlen(t);
+	int i = 0;
+	for (i = 0; i <= k; i++)
+	{
+		*(d + i) = *(t + i);
+	}
+
+
+}
+
+
+int main()
+{
+	char arr[] = "asdfg";
+	char arr2[] = "qwe";
+	my_strcpy(arr, arr2);
+	printf("%s", arr);
+
+}
