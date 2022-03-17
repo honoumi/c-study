@@ -12,17 +12,20 @@ void my_strcpy(char* d, char* t)
 
 
 }
-void my_strcpy2(char* d, char* t)
+void my_strcpy2(char* d, char* t)char* my_strcpy(char* d,const char* t)
 {
 	assert(d != NULL);
 	assert(t != NULL);
+	char* ret = d;
 	while (*d++ = *t++)
 	{
 		;
 	}
-
+	//返回目的代码的起始地址！
+	return ret;
 
 }
+
 
 
 int main()
