@@ -22,5 +22,5 @@ const char* my_strstr(const char* p1, const char* p2)
 		}
 		cur++;
 	}
-
+	return NULL;
 }
