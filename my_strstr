@@ -1,0 +1,23 @@
+const char* my_strstr(const char* str1, const char* str2)
+{
+	while (*str1 != *str2)
+	{
+		str1++;
+	}
+	const char* tmp = str1;
+
+	while (*str1 == *str2 && *str1 != '\0' && *str2 != '\0')
+	{
+		str1++;
+		str2++;
+	}
+
+	if (*str2 == '\0')
+	{
+		return tmp;
+	}
+	else
+	{
+		return NULL;
+	}
+}
