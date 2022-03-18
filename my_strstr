@@ -20,7 +20,12 @@ const char* my_strstr(const char* p1, const char* p2)
 		{
 			return cur;
 		}
+		if (*s1 == '\0')
+		{
+			return NULL;
+		}
 		cur++;
 	}
 	return NULL;
+
 }
