@@ -1,0 +1,22 @@
+void* my_memmove(void* dest, const void* src, int sum)
+{
+	void* tmp = dest;
+	if (dest < src)
+	{
+		while (sum--)
+		{
+			*(char*)dest = *(char*)src;//从前往后
+			++(char*)dest;
+			++(char*)src;
+		}
+	}
+	else
+	{
+		while (sum--)
+		{
+			*((char*)dest + sum) = *((char*)src + sum);
+
+		}
+	}
+	return tmp;
+}
