@@ -1,0 +1,13 @@
+void* my_memcpy(void* dest, void* rec, size_t sum)
+{
+	char* dest1 = (char*)dest;
+	char* rec2 = (char*)rec;
+
+	while (sum--)
+	{
+		*dest1 = *rec2;
+		dest1++;
+		rec2++;
+	}
+	return dest;
+}
